@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Thiago Christopher</Authors>
+    <Description>AbacatePay SDK for dotnet</Description>
+    <PackageProjectUrl>https://www.abacatepay.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thiagochfc/abacatepay-dotnet-sdk</RepositoryUrl>
+    <Copyright>2024 AbacatePay.SDK</Copyright>
+    <PackageLicenseFile>Resources\LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>Resources\README.md</PackageReadmeFile>
+    <PackageTags>abacatepay;sdk;charp-library</PackageTags>
+    <PackageVersion>0.0.1</PackageVersion>
+    <Company>AbacatePay.SDK</Company>
+    <IsPackable>true</IsPackable>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RootNamespace>AbacatePay</RootNamespace>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>Resources</PackagePath>
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>Resources</PackagePath>
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+
+</Project>
