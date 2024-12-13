@@ -14,6 +14,6 @@ public sealed class BillingModel
     public IEnumerable<string> Methods { get; set; } = null!;
     public IEnumerable<ProductBillingModel> Products { get; set; } = null!;
     public Frequency Frequency { get; set; }
-    public bool NextBilling { get; set; }
+    public bool? NextBilling { get; set; }
     public CustomerBillingModel Customer { get; set; } = null!;
 }
