@@ -17,7 +17,7 @@ public class AbacatePayClientCustomerTests
     public async Task ShouldCreateCustomerSuccessfully()
     {
         // Arrange
-        _mockHttp.When("/customer/create")
+        _mockHttp.When("/v1/customer/create")
             .Respond(HttpStatusCode.OK,
                 "application/json",
                 """
@@ -49,7 +49,7 @@ public class AbacatePayClientCustomerTests
     public async Task ShouldListCustomersSuccessfully()
     {
         // Arrange
-        _mockHttp.When("/customer/list")
+        _mockHttp.When("/v1/customer/list")
             .Respond(HttpStatusCode.OK,
                 "application/json",
                 """
@@ -81,7 +81,7 @@ public class AbacatePayClientCustomerTests
     public async Task ShouldNotCreateCustomerDueToErrors()
     {
         // Arrange
-        _mockHttp.When("/customer/create")
+        _mockHttp.When("/v1/customer/create")
             .Respond(HttpStatusCode.Unauthorized,
                 "application/json",
                 """
@@ -106,7 +106,7 @@ public class AbacatePayClientCustomerTests
     public async Task ShouldNotListCustomersDueToErrors()
     {
         // Arrange
-        _mockHttp.When("/customer/list")
+        _mockHttp.When("/v1/customer/list")
             .Respond(HttpStatusCode.Unauthorized,
                 "application/json",
                 """

@@ -23,7 +23,7 @@ public sealed class AbacatePayClientCustomer
     public async Task<(bool, IEnumerable<CustomerModel>?, ErrorModel?)> ListAsync(CancellationToken cancellationToken)
     {
         HttpResponseMessage response = await _httpClient
-            .GetAsync("/customer/list", cancellationToken)
+            .GetAsync("/v1/customer/list", cancellationToken)
             .ConfigureAwait(false);
 
         string content = await response
@@ -51,7 +51,7 @@ public sealed class AbacatePayClientCustomer
             new(JsonConvert.SerializeObject(customer, new StringEnumConverter()), Encoding.UTF8, "application/json");
 
         HttpResponseMessage response = await _httpClient
-            .PostAsync("/customer/create", stringContent, cancellationToken)
+            .PostAsync("/v1/customer/create", stringContent, cancellationToken)
             .ConfigureAwait(false);
 
         string content = await response

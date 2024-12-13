@@ -15,7 +15,7 @@ public class AbacatePayClientBilllingTests
     public async Task ShouldCreateBillingSuccessfully()
     {
         // Arrange
-        _mockHttp.When("/billing/create")
+        _mockHttp.When("/v1/billing/create")
             .Respond(HttpStatusCode.OK,
                 "application/json",
                 """
@@ -71,7 +71,7 @@ public class AbacatePayClientBilllingTests
     public async Task ShouldListBillingsSuccessfully()
     {
         // Arrange
-        _mockHttp.When("/billing/list")
+        _mockHttp.When("/v1/billing/list")
             .Respond(HttpStatusCode.OK,
                 "application/json",
                 """
@@ -124,7 +124,7 @@ public class AbacatePayClientBilllingTests
     public async Task ShouldNotCreateBillingDueToErrors()
     {
         // Arrange
-        _mockHttp.When("/billing/create")
+        _mockHttp.When("/v1/billing/create")
             .Respond(HttpStatusCode.Unauthorized,
                 "application/json",
                 """
@@ -149,7 +149,7 @@ public class AbacatePayClientBilllingTests
     public async Task ShouldNotListBillingsDueToErrors()
     {
         // Arrange
-        _mockHttp.When("/billing/list")
+        _mockHttp.When("/v1/billing/list")
             .Respond(HttpStatusCode.Unauthorized,
                 "application/json",
                 """
